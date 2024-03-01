@@ -1,7 +1,7 @@
 -- Query 01: calculate total visit, pageview, transaction for Jan, Feb and March 2017 (order by month).
 SELECT   
   FORMAT_DATE('%Y%m', PARSE_DATE('%Y%m%d', DATE)) AS month
-  , sum(totals.visits) AS visits
+  , sum(totals.visits)AS visits
   , sum(totals.pageviews)	AS pageviews
   , sum(totals.transactions) AS transactions
 FROM `bigquery-public-data.google_analytics_sample.ga_sessions_2017*` 
